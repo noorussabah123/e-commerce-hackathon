@@ -1,6 +1,5 @@
 import Image from "next/image"
 import { Card, CardHeader, CardTitle, CardContent, CardDescription } from "@/components/ui/card";
-import { Button } from "./ui/button";
 import Link from "next/link";
 
 const products = [
