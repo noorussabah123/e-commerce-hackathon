@@ -19,7 +19,13 @@ export default function Hero() {
                 </div>
 
                 <div className="w-full md:w-auto mb-[30px] md:mb-[50px] flex justify-center md:justify-start">
-                    <Image src={"/banner.png"} alt="banner" width={1440} height={663} />
+                    <Image 
+                    src={"/banner.png"} 
+                    alt="banner" 
+                    width={1440} 
+                    height={663}
+                    priority 
+                    />
                 </div>
             </div>
         </>
