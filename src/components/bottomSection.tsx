@@ -21,10 +21,10 @@ export default function BottomSection() {
         <>
             {/* Vector Images Section */}
             <div className="w-full h-[122px] bg-black px-[20px] sm:px-[50px] md:px-[100px] py-[44px] flex justify-between items-center gap-[20px] sm:gap-[50px] md:gap-[106px]">
-                <Image src={"/vector.png"} alt="picture 1" width={166.48} height={33.16} />
-                <Image src={"/vector1.png"} alt="picture2" width={166.48} height={33.16} />
-                <Image src={"/vector2.png"} alt="picture3" width={166.48} height={33.16} />
-                <Image src={"/vector3.png"} alt="picture4" width={166.48} height={33.16} />
+                <Image src={"/logo1.png"} alt="picture 1" width={166.48} height={33.16} />
+                <Image src={"/logo2.png"} alt="picture2" width={166.48} height={33.16} />
+                <Image src={"/logo3.png"} alt="picture3" width={166.48} height={33.16} />
+                <Image src={"/logo4.png"} alt="picture4" width={166.48} height={33.16} />
             </div>
 
             {/* New Arrivals Section */}
