@@ -1,13 +1,14 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ProductDetails() {
   return (
     <div>
       {/* Breadcrumbs */}
       <nav className="text-sm ml-[50px] mb-4 text-gray-500">
-        <a href="/" className="hover:underline">Home</a> &gt;{" "}
-        <a href="/shop" className="hover:underline">Shop</a> &gt;{" "}
-        <a href="/shop/men" className="hover:underline">Men</a> &gt;{" "}
+        <Link href="/" className="hover:underline">Home</Link> &gt;{" "}
+        <Link href="/shop" className="hover:underline">Shop</Link> &gt;{" "}
+        <Link href="/shop/men" className="hover:underline">Men</Link> &gt;{" "}
         <span className="text-black font-semibold">T-shirts</span>
       </nav>
 
