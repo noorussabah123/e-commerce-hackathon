@@ -3,10 +3,11 @@ import { Card, CardHeader, CardTitle, CardContent, CardDescription } from "@/com
 import Link from "next/link";
 
 const products = [
-    { image: "/product1.png", name: "T-Shirt with Tape Details", price: "$120" },
-    { image: "/product2.png", name: "Skinny Fit Jeans", price: "$240" },
-    { image: "/product3.png", name: "Checkered Shirt", price: "$180" },
-    { image: "/product4.png", name: "Sleeve Striped T-Shirt", price: "$130" },
+    
+    { image: "/product1.png", name: "T-Shirt with Tape Details", price: "$120", link: "/Product1-details" },
+    { image: "/product2.png", name: "Skinny Fit Jeans", price: "$240", link: "/Product2-details" },
+    { image: "/product3.png", name: "Checkered Shirt", price: "$180", link: "/Product3-details" },
+    { image: "/product4.png", name: "Sleeve Striped T-Shirt", price: "$130", link: "/Product4-details" },
 ];
 
 const products2 = [
@@ -33,7 +34,9 @@ export default function BottomSection() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-[20px] sm:px-[50px] lg:px-[100px] pt-[55px]">
                     {products.map((product, index) => (
                         <Card key={index} className="w-full max-w-sm bg-white shadow-lg">
+                            <Link href={`${product.link}`}>
                             <CardHeader className="p-0">
+                           
                                 <Image 
                                     src={product.image} 
                                     alt={product.name} 
@@ -41,12 +44,16 @@ export default function BottomSection() {
                                     height={200} 
                                     className="object-cover w-full h-48 rounded-t-md" 
                                 />
+                              
                             </CardHeader>
+                           
                             <CardContent className="p-4">
                                 <CardTitle className="text-[18px] sm:text-[20px] font-bold text-black">{product.name}</CardTitle>
+                                
                                 <Image src={"/star1.png"} alt="star1" width={150} height={19} className="py-[8px]" />
                                 <CardDescription className="text-[20px] sm:text-[24px] font-bold text-black">{product.price}</CardDescription>
                             </CardContent>
+                            </Link>
                         </Card>
                     ))}
                 </div>
@@ -54,7 +61,7 @@ export default function BottomSection() {
 
             {/* View All Link */}
             <div className="flex items-center justify-center pt-[36px] pb-[128px] text-[16px] bg-transparent">
-                <Link href={"#!"}>View All</Link>
+                <Link href={"/products"}>View All</Link>
             </div>
 
             {/* Top Selling Section */}

@@ -2,12 +2,11 @@ import { FaTwitter } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
 import { IoLogoGithub } from "react-icons/io";
-import Image from "next/image";
 
 
 export default function Footer(){
     return(
-        <div className="md:px-[100px]  ">
+        <div className="md:px-[100px] h-auto bg-gray-200 ">
     <div className="  h-[846px] w-full md:h-[499px] mt-[100px] md:mt-0 flex items-center justify-center gap-24 ">
         <footer className="md:w-[1240px] md:h-[144px]  flex flex-col gap-5 md:gap-4 md:flex-row items-center justify-between ">
 
@@ -108,7 +107,6 @@ export default function Footer(){
   <h5 className="text-center md:text-left">
     Shop.co © 2000-2023, All Rights Reserved
   </h5>
-  <Image src={"/payment-logo.png"} alt="payment logo" width={281} height={30} />
 </div>
         </div>
     )
