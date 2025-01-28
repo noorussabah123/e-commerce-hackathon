@@ -14,8 +14,9 @@ import Link from "next/link";
 // }
 
 export default async function ProductPage({ params }: { params: { id: string } }) {
+  const { id } = params;
   const product = await client.fetch(`*[_type == "products" && _id == $id][0]`, {
-    id: params.id,
+    id,
   });
 
   if (!product) {
