@@ -4,16 +4,14 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import urlFor from "@/lib/urlFor";
 import Link from "next/link";
-// import imageUrlBuilder, { SanityImageSource } from "@sanity/image-url"; // Correct type
 
-// // Sanity ke liye image URL banane ka function
-// const builder = imageUrlBuilder(client);
+interface ProductPageProps {
+  params: {
+    id: string;
+  };
+}
 
-// function urlFor(source: SanityImageSource) {
-//   return builder.image(source);
-// }
-
-export default async function ProductPage({ params }: { params: { id: string } }) {
+export default async function ProductPage({ params }: ProductPageProps) {
   const { id } = params;
   const product = await client.fetch(`*[_type == "products" && _id == $id][0]`, {
     id,
