@@ -1,5 +1,5 @@
 import { client } from "@/sanity/lib/client";
-import { Card, CardContent, CardTitle } from "@/components/ui/card"; // Only used imports
+import { Card, CardContent, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import urlFor from "@/lib/urlFor";
