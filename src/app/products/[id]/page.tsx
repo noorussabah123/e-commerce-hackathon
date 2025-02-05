@@ -11,7 +11,7 @@ interface ProductPageProps {
   };
 }
 
-export default async function ProductPage({ params }: ProductPageProps) {
+export default async function ProductPage({ params }: { params: { id: string } }) {
   const { id } = params;
   const product = await client.fetch(`*[_type == "products" && _id == $id][0]`, {
     id,
